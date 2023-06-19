@@ -36,7 +36,7 @@
               </elementProp>
               <elementProp name="influxdbUrl" elementType="Argument">
                 <stringProp name="Argument.name">influxdbUrl</stringProp>
-                <stringProp name="Argument.value">http://a60d251d0fdb548a59bf53600cc72c88-834221473.ap-south-1.elb.amazonaws.com:8083//write?db=jmeter</stringProp>
+                <stringProp name="Argument.value">http://a60d251d0fdb548a59bf53600cc72c88-834221473.ap-south-1.elb.amazonaws.com:8086/write?db=jmeter</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="application" elementType="Argument">
