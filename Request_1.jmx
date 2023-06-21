@@ -18,7 +18,7 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">10</stringProp>
+        <stringProp name="ThreadGroup.num_threads">20</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">30</stringProp>
@@ -135,7 +135,7 @@
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Request_2" enabled="false">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Request_2" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -153,62 +153,8 @@
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
-        <hashTree>
-          <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="true">
-            <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="influxdbMetricsSender" elementType="Argument">
-                  <stringProp name="Argument.name">influxdbMetricsSender</stringProp>
-                  <stringProp name="Argument.value">org.apache.jmeter.visualizers.backend.influxdb.HttpMetricsSender</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="influxdbUrl" elementType="Argument">
-                  <stringProp name="Argument.name">influxdbUrl</stringProp>
-                  <stringProp name="Argument.value">http://host.docker.internal:31502/write?db=jmeter</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="application" elementType="Argument">
-                  <stringProp name="Argument.name">application</stringProp>
-                  <stringProp name="Argument.value">POC</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="measurement" elementType="Argument">
-                  <stringProp name="Argument.name">measurement</stringProp>
-                  <stringProp name="Argument.value">jmeter</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="summaryOnly" elementType="Argument">
-                  <stringProp name="Argument.name">summaryOnly</stringProp>
-                  <stringProp name="Argument.value">true</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="samplersRegex" elementType="Argument">
-                  <stringProp name="Argument.name">samplersRegex</stringProp>
-                  <stringProp name="Argument.value">.*</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="percentiles" elementType="Argument">
-                  <stringProp name="Argument.name">percentiles</stringProp>
-                  <stringProp name="Argument.value">90;95;99</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="testTitle" elementType="Argument">
-                  <stringProp name="Argument.name">testTitle</stringProp>
-                  <stringProp name="Argument.value">Test name</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="eventTags" elementType="Argument">
-                  <stringProp name="Argument.name">eventTags</stringProp>
-                  <stringProp name="Argument.value"></stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-            <stringProp name="classname">org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient</stringProp>
-          </BackendListener>
-          <hashTree/>
-        </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Request_3" enabled="false">
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Request_3" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -226,62 +172,8 @@
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
-        <hashTree>
-          <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="true">
-            <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="influxdbMetricsSender" elementType="Argument">
-                  <stringProp name="Argument.name">influxdbMetricsSender</stringProp>
-                  <stringProp name="Argument.value">org.apache.jmeter.visualizers.backend.influxdb.HttpMetricsSender</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="influxdbUrl" elementType="Argument">
-                  <stringProp name="Argument.name">influxdbUrl</stringProp>
-                  <stringProp name="Argument.value">http://host.docker.internal:31502/write?db=jmeter</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="application" elementType="Argument">
-                  <stringProp name="Argument.name">application</stringProp>
-                  <stringProp name="Argument.value">POC</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="measurement" elementType="Argument">
-                  <stringProp name="Argument.name">measurement</stringProp>
-                  <stringProp name="Argument.value">jmeter</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="summaryOnly" elementType="Argument">
-                  <stringProp name="Argument.name">summaryOnly</stringProp>
-                  <stringProp name="Argument.value">true</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="samplersRegex" elementType="Argument">
-                  <stringProp name="Argument.name">samplersRegex</stringProp>
-                  <stringProp name="Argument.value">.*</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="percentiles" elementType="Argument">
-                  <stringProp name="Argument.name">percentiles</stringProp>
-                  <stringProp name="Argument.value">90;95;99</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="testTitle" elementType="Argument">
-                  <stringProp name="Argument.name">testTitle</stringProp>
-                  <stringProp name="Argument.value">Test name</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="eventTags" elementType="Argument">
-                  <stringProp name="Argument.name">eventTags</stringProp>
-                  <stringProp name="Argument.value"></stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-            <stringProp name="classname">org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient</stringProp>
-          </BackendListener>
-          <hashTree/>
-        </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Request_4" enabled="false">
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Request_4" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -299,62 +191,8 @@
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
-        <hashTree>
-          <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="true">
-            <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="influxdbMetricsSender" elementType="Argument">
-                  <stringProp name="Argument.name">influxdbMetricsSender</stringProp>
-                  <stringProp name="Argument.value">org.apache.jmeter.visualizers.backend.influxdb.HttpMetricsSender</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="influxdbUrl" elementType="Argument">
-                  <stringProp name="Argument.name">influxdbUrl</stringProp>
-                  <stringProp name="Argument.value">http://host.docker.internal:31502/write?db=jmeter</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="application" elementType="Argument">
-                  <stringProp name="Argument.name">application</stringProp>
-                  <stringProp name="Argument.value">POC</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="measurement" elementType="Argument">
-                  <stringProp name="Argument.name">measurement</stringProp>
-                  <stringProp name="Argument.value">jmeter</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="summaryOnly" elementType="Argument">
-                  <stringProp name="Argument.name">summaryOnly</stringProp>
-                  <stringProp name="Argument.value">true</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="samplersRegex" elementType="Argument">
-                  <stringProp name="Argument.name">samplersRegex</stringProp>
-                  <stringProp name="Argument.value">.*</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="percentiles" elementType="Argument">
-                  <stringProp name="Argument.name">percentiles</stringProp>
-                  <stringProp name="Argument.value">90;95;99</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="testTitle" elementType="Argument">
-                  <stringProp name="Argument.name">testTitle</stringProp>
-                  <stringProp name="Argument.value">Test name</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="eventTags" elementType="Argument">
-                  <stringProp name="Argument.name">eventTags</stringProp>
-                  <stringProp name="Argument.value"></stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-            <stringProp name="classname">org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient</stringProp>
-          </BackendListener>
-          <hashTree/>
-        </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Request_5" enabled="false">
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Request_5" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -372,61 +210,7 @@
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
-        <hashTree>
-          <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="true">
-            <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="influxdbMetricsSender" elementType="Argument">
-                  <stringProp name="Argument.name">influxdbMetricsSender</stringProp>
-                  <stringProp name="Argument.value">org.apache.jmeter.visualizers.backend.influxdb.HttpMetricsSender</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="influxdbUrl" elementType="Argument">
-                  <stringProp name="Argument.name">influxdbUrl</stringProp>
-                  <stringProp name="Argument.value">http://host.docker.internal:31502/write?db=jmeter</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="application" elementType="Argument">
-                  <stringProp name="Argument.name">application</stringProp>
-                  <stringProp name="Argument.value">POC</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="measurement" elementType="Argument">
-                  <stringProp name="Argument.name">measurement</stringProp>
-                  <stringProp name="Argument.value">jmeter</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="summaryOnly" elementType="Argument">
-                  <stringProp name="Argument.name">summaryOnly</stringProp>
-                  <stringProp name="Argument.value">true</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="samplersRegex" elementType="Argument">
-                  <stringProp name="Argument.name">samplersRegex</stringProp>
-                  <stringProp name="Argument.value">.*</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="percentiles" elementType="Argument">
-                  <stringProp name="Argument.name">percentiles</stringProp>
-                  <stringProp name="Argument.value">90;95;99</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="testTitle" elementType="Argument">
-                  <stringProp name="Argument.name">testTitle</stringProp>
-                  <stringProp name="Argument.value">Test name</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-                <elementProp name="eventTags" elementType="Argument">
-                  <stringProp name="Argument.name">eventTags</stringProp>
-                  <stringProp name="Argument.value"></stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-            <stringProp name="classname">org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient</stringProp>
-          </BackendListener>
-          <hashTree/>
-        </hashTree>
+        <hashTree/>
       </hashTree>
     </hashTree>
   </hashTree>
